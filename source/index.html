@@ -15,7 +15,41 @@
   <link rel="preload" href="fonts/RobotoCondensed-Light.woff2" as="font" crossorigin="anonymous">
 </head>
 <body>
-  <header>
+  <header class="page-header">
+    <div class="page-header__top-info">
+      <a class="logo" href="index.html" aria-label="Логотип фитнесс центра Supergym"></a>
+      <a class="page-header__phone" href="tel:88005555555">8-800-555-55-55</a>
+    </div>
+    <div class="page-header__info">
+      <div class="page-header__title">
+        <h1>Фитнес<br>центр</h1>
+        <p>
+          Тренажёрный зал<br>
+          Групповые занятия<br>
+          Кардио-зона
+        </p>
+      </div>
+      <span>Омск</span>
+      <button class="button">Купить абонемент</button>
+    </div>
+    <div class="page-header__picture">
+      <picture>
+        <source media="(min-width: 1300px)" srcset="img/header-picture-desktop@1x.webp 1x, img/header-picture-desktop@2x.webp 2x" type="image/webp">
+        <source media="(min-width: 768px)" srcset="img/header-picture-tablet@1x.webp 1x, img/header-picture-tablet@2x.webp 2x" type="image/webp">
+        <source srcset="img/header-picture-tablet@1x.webp 1x, img/header-picture-tablet@2x.webp 2x" type="image/webp">
+        <source media="(min-width: 1300px)" srcset="img/header-picture-desktop@1x.jpg 1x, img/header-picture-desktop@2x.jpg 2x" type="image/jpeg">
+        <source media="(min-width: 768px)" srcset="img/header-picture-tablet@1x.jpg 1x, img/header-picture-tablet@2x.jpg 2x" type="image/jpeg">
+        <source srcset="img/header-picture-tablet@1x.jpg 1x, img/header-picture-tablet@2x.jpg 2x" type="image/jpeg">
+        <!-- 1х: 500px; 2x:1000px -->
+        <img src="img/header-picture-tablet@1x.webp" srcset="img/header-picture-tablet@1x.webp 1x, img/header-picture-tablet@2x.webp 2x" alt="Supergym Омск">
+      </picture>
+    </div>
+    <ul class="page-header__social">
+        <li><a href="#">fb</a></li>
+        <li><a href="#">vk</a></li>
+        <li><a href="#">ig</a></li>
+      </ul>
+
   </header>
   <main>
   </main>

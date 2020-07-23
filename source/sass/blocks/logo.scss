@@ -1,0 +1,22 @@
+.logo {
+  margin-top: 0;
+  margin-bottom: 0;
+  display: block;
+  width: 90px;
+  height: 20px;
+  background-image: url("../img/icon-logo.svg");
+  background-size: 90px 20px;
+  background-repeat: no-repeat;
+
+  @media (max-width: $tablet-width) {
+    width: 82px;
+    height: 18px;
+    background-size: 82px 18px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 65px;
+    height: 15px;
+    background-size: 65px 15px;
+  }
+}
