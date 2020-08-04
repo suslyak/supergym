@@ -7,8 +7,23 @@
   color: $white;
   text-transform: uppercase;
   background-color: transparent;
+  text-decoration: none;
   border: 4px solid $white;
   cursor: pointer;
 
   @include actions;
+
+  &--blue {
+    color: $blue--darken;
+    border-width: 2px;
+    border-color: $blue--darken;
+  }
+
+  &--smaller {
+    padding: 24px 45px;
+  }
+
+  &--gradient {
+    background: linear-gradient(111.72deg, $red--brighten 17.6%, $blue-gradient-button 95.31%);
+  }
 }

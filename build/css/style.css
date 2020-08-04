@@ -343,6 +343,9 @@ body {
   text-align: left;
   color: #102654; }
 
+main {
+  overflow: hidden; }
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -369,6 +372,7 @@ body {
   color: #ffffff;
   text-transform: uppercase;
   background-color: transparent;
+  text-decoration: none;
   border: 4px solid #ffffff;
   cursor: pointer; }
   .button:hover {
@@ -377,6 +381,14 @@ body {
     background-color: #74819c; }
   .button:active {
     opacity: 0.6; }
+  .button--blue {
+    color: #102654;
+    border-width: 2px;
+    border-color: #102654; }
+  .button--smaller {
+    padding: 24px 45px; }
+  .button--gradient {
+    background: linear-gradient(111.72deg, #ed0233 17.6%, #003eb7 95.31%); }
 
 .logo {
   margin-top: 0;
@@ -730,3 +742,268 @@ body {
       margin-top: 40px;
       top: 0;
       left: 0; } }
+
+.abonements {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 112px 103px 120px;
+  background-color: #f8f9fc; }
+  @media (max-width: 1023px) {
+    .abonements {
+      padding: 98px 163px 100px; } }
+  @media (max-width: 767px) {
+    .abonements {
+      padding: 67px 15px 72px; } }
+  .abonements h2 {
+    font-family: "Bebas Neue", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 49px;
+    line-height: 49px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin: 0 0 8px; }
+    @media (max-width: 1023px) {
+      .abonements h2 {
+        font-size: 42px;
+        line-height: 42px; } }
+    @media (max-width: 767px) {
+      .abonements h2 {
+        font-size: 32px;
+        line-height: 32px; } }
+  .abonements::after {
+    content: "";
+    width: 470px;
+    height: 494px;
+    position: absolute;
+    bottom: -151px;
+    right: -183px;
+    background: url("../img/discs@1x.png") no-repeat;
+    background-size: cover;
+    z-index: 0; }
+    @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
+      .abonements::after {
+        background-image: url("../img/discs@2x.png"); } }
+    @media (max-width: 1023px) {
+      .abonements::after {
+        width: 423px;
+        height: 444px;
+        bottom: -125px;
+        right: -76px; } }
+    @media (max-width: 767px) {
+      .abonements::after {
+        display: none; } }
+
+.abonements__taps {
+  padding: 0;
+  margin-top: 28px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  border-bottom: 2px solid rgba(120, 120, 120, 0.2); }
+  .abonements__taps input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    -webkit-clip-path: inset(100%);
+            clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden; }
+    .abonements__taps input:checked + label {
+      color: #102654;
+      border-bottom: 2px solid #d10a42; }
+  .abonements__taps label {
+    position: relative;
+    top: 2px;
+    padding: 0 0 11px;
+    margin-right: 47px;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+    color: rgba(28, 51, 116, 0.5); }
+    .abonements__taps label:last-child {
+      margin-right: 0; }
+    @media (max-width: 1023px) {
+      .abonements__taps label {
+        font-size: 18px;
+        line-height: 27px;
+        margin-right: 54px; } }
+    @media (max-width: 767px) {
+      .abonements__taps label {
+        font-size: 16px;
+        line-height: 24px;
+        margin-right: 45px; } }
+  .abonements__taps--no-js {
+    display: none; }
+  @media (max-width: 1023px) {
+    .abonements__taps {
+      margin-top: 23px; } }
+  @media (max-width: 767px) {
+    .abonements__taps {
+      margin-top: 15px; } }
+
+.abonements__cards-list {
+  width: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  z-index: 1;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 36px; }
+  .abonements__cards-list h3,
+  .abonements__cards-list h4 {
+    font-weight: bold;
+    font-size: 26px;
+    margin: 0 0 12px; }
+  .abonements__cards-list h3 {
+    display: none; }
+  .abonements__cards-list--no-js {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .abonements__cards-list--no-js h3 {
+      display: block; }
+  @media (max-width: 1023px) {
+    .abonements__cards-list {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      margin-top: 45px; } }
+  @media (max-width: 767px) {
+    .abonements__cards-list {
+      margin-top: 35px; }
+      .abonements__cards-list h4 {
+        font-size: 22px;
+        line-height: 24px;
+        margin-bottom: 9px; } }
+
+.abonements__card {
+  width: calc((100% - 80px) / 3);
+  margin-top: 40px;
+  margin-right: 40px;
+  padding: 61px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 7px solid #ffffff;
+  background-color: #ffffff; }
+  .abonements__card:nth-child(3n+3) {
+    margin-right: 0; }
+  .abonements__card:nth-child(-n+3) {
+    margin-top: 0; }
+  .abonements__card p {
+    margin: 0 0 85px; }
+  .abonements__card a {
+    margin-top: auto; }
+  .abonements__card:hover {
+    -o-border-image: linear-gradient(140deg, #ed0233 0%, #00359f 100%);
+       border-image: linear-gradient(140deg, #ed0233 0%, #00359f 100%);
+    border-image-slice: 1; }
+    .abonements__card:hover a {
+      color: #ffffff;
+      border-color: #ffffff;
+      background: linear-gradient(111.72deg, #ed0233 17.6%, #003eb7 95.31%); }
+  .abonements__card--no-js {
+    display: none; }
+  @media (max-width: 1320px) {
+    .abonements__card {
+      width: calc((100% - 40px) / 3);
+      margin-right: 20px; } }
+  @media (max-width: 1023px) {
+    .abonements__card {
+      width: 100%;
+      padding-top: 58px;
+      margin-right: 0;
+      margin-bottom: 41px; }
+      .abonements__card:last-child {
+        margin-bottom: 0; } }
+  @media (max-width: 767px) {
+    .abonements__card {
+      padding: 43px 20px;
+      margin-right: 0; }
+      .abonements__card p {
+        margin: 0 0 70px; } }
+
+.abonements__price {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 57px; }
+  .abonements__price p {
+    margin: 0;
+    line-height: 0;
+    font-weight: bold;
+    font-size: 100px;
+    color: rgba(232, 232, 232, 0.5); }
+  .abonements__price span {
+    margin-top: 4px;
+    line-height: 0;
+    font-weight: bold;
+    font-size: 60px;
+    color: #103aae; }
+    .abonements__price span::after {
+      content: "";
+      display: inline-block;
+      width: 30px;
+      height: 42px;
+      margin-left: 10px;
+      background-image: url("../img/icon-rouble.svg"); }
+      @media (max-width: 767px) {
+        .abonements__price span::after {
+          width: 24px;
+          height: 33px;
+          background-size: 24px 33px; } }
+  @media (max-width: 767px) {
+    .abonements__price {
+      margin-bottom: 49px; }
+      .abonements__price p {
+        font-size: 80px; }
+      .abonements__price span {
+        font-size: 48px; } }
