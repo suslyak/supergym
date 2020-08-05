@@ -1,0 +1,199 @@
+.event {
+  display: flex;
+  justify-content: space-between;
+  margin: 120px 103px;
+  font-weight: normal;
+  color: $white;
+  background-color: $red--brighten;
+  overflow: hidden;
+
+  @media (max-width: $tablet-width) {
+    margin: 100px 45px;
+  }
+
+  @media (max-width: $mobile-width) {
+    flex-wrap: wrap;
+    margin: 70px 15px;
+  }
+}
+
+.event__info {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 68px 78px 87px;
+  justify-content: flex-start;
+  align-items: center;
+
+  h2 {
+    width: 58%;
+    float: left;
+    margin: 0;
+    font-family: "Bebas Neue", "Arial", sans-serif;
+    font-weight: bold;
+    font-size: 90px;
+    line-height: 90px;
+    letter-spacing: 0.03em;
+    color: $white;
+  }
+
+  p {
+    width: 100%;
+    margin-top: -3px;
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  a {
+    width: 100%;
+    position: relative;
+    top: 12px;
+    text-align: center;
+    padding: 25px 45px;
+  }
+
+  @media (max-width: $desktop-middle-width) {
+    flex-shrink: 0.78;
+    padding: 70px 3% 87px;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding: 42px 45px 50px;
+    flex-shrink: 1;
+
+    h2 {
+      font-size: 52px;
+      line-height: 52px;
+    }
+
+    p {
+      width: 100%;
+      margin-top: -7px;
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+    a {
+      top: 5px;
+      font-size: 10px;
+      line-height: 12px;
+      padding: 13px 40px;
+      border-width: 2px;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+    padding: 45px 45px 54px;
+    align-items: flex-start;
+    flex-shrink: 0;
+
+    p {
+      margin: 5px 0 24px;
+    }
+  }
+}
+
+.event__datetime {
+  margin-top: 30px;
+  margin-left: auto;
+
+  @media (max-width: $tablet-width) {
+    margin-top: 12px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-top: 20px;
+  }
+}
+
+.event__date {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  margin-bottom: 50px;
+  padding-top: 5px;
+  font-size: 14px;
+  line-height: 17px;
+  border-top: 1px solid $white;
+
+  span {
+    display: block;
+    position: relative;
+    top: -3px;
+    float: left;
+    margin-right: 6px;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 1;
+
+    @media (max-width: $tablet-width) {
+      font-size: 24px;
+      line-height: 36px;
+      margin-right: 3px;
+    }
+  }
+
+  &::before {
+    content: "Дата";
+    display: block;
+    position: absolute;
+    top: -32px;
+    font-size: 18px;
+    line-height: 27px;
+
+    @media (max-width: $tablet-width) {
+      top: -20px;
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 15px;
+    padding-top: 1px;
+    font-size: 10px;
+    line-height: 15px;
+  }
+}
+
+.event__time {
+  position: relative;
+  padding-top: 5px;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 1;
+  border-top: 1px solid $white;
+
+  &::before {
+    content: "Время";
+    display: block;
+    position: absolute;
+    top: -32px;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+
+    @media (max-width: $tablet-width) {
+      top: -20px;
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    padding-top: 1px;
+    font-size: 24px;
+  }
+}
+
+.event__picture {
+  flex-shrink: 0;
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+}
