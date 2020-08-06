@@ -1,19 +1,19 @@
 .event {
   display: flex;
   justify-content: space-between;
-  margin: 120px 103px;
+  margin: 120px 103px 114px;
   font-weight: normal;
   color: $white;
   background-color: $red--brighten;
   overflow: hidden;
 
   @media (max-width: $tablet-width) {
-    margin: 100px 45px;
+    margin: 100px 45px 95px;
   }
 
   @media (max-width: $mobile-width) {
     flex-wrap: wrap;
-    margin: 70px 15px;
+    margin: 70px 15px 66px;
   }
 }
 
