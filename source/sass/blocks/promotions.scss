@@ -33,6 +33,8 @@
     &:visited {
       color: $blue;
     }
+
+    @include actions;
   }
 
   @media (max-width: $tablet-width) {

@@ -72,7 +72,7 @@
   flex-wrap: nowrap;
   border-bottom: 2px solid $grayOp;
 
-  input {
+  input[type="radio"] {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -87,6 +87,7 @@
     &:checked + label {
       color: $blue--darken;
       border-bottom: 2px solid $red;
+      cursor: unset;
     }
   }
 
@@ -99,10 +100,13 @@
     font-size: 20px;
     line-height: 30px;
     color: $blueOp--darken;
+    cursor: pointer;
 
     &:last-child {
       margin-right: 0;
     }
+
+    @include actions;
 
     @media (max-width: $tablet-width) {
       font-size: 18px;

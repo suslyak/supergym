@@ -11,14 +11,18 @@
 
 @mixin actions() {
   &:hover {
-    background-color: $blue-gray--lighten;
+    border-image: linear-gradient(140deg, $red--brighten 0%, $blue-gradient 100%);
+    border-image-slice: 1;
   }
 
   &:focus {
-    background-color: $blue-gray--lighten;
+    border-image: linear-gradient(140deg, $red--brighten 0%, $blue-gradient 100%);
+    border-image-slice: 1;
   }
 
   &:active {
+    border-image: linear-gradient(140deg, $red--brighten 0%, $blue-gradient 100%);
+    border-image-slice: 1;
     opacity: 0.6;
   }
 }

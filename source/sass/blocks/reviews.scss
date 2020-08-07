@@ -4,7 +4,7 @@
   flex-wrap: wrap;
   align-items: stretch;
   justify-content: flex-start;
-  padding: 55px 103px 120px;
+  padding: 55px 103px 60px;
 
   h2 {
     width: 100%;
@@ -19,7 +19,7 @@
   }
 
   @media (max-width: $tablet-width) {
-    padding: 46px 45px 120px;
+    padding: 46px 45px 50px;
 
     h2 {
       margin: 0 0 45px;
@@ -29,7 +29,7 @@
   }
 
   @media (max-width: $mobile-width) {
-    padding: 30px 47px 60px;
+    padding: 30px 47px 35px;
 
     h2 {
       font-size: 32px;
