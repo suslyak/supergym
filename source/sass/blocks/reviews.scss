@@ -1,0 +1,149 @@
+.reviews {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: flex-start;
+  padding: 55px 103px 120px;
+
+  h2 {
+    width: 100%;
+    margin: 0 0 56px;
+    text-align: center;
+    font-family: "Bebas Neue", "Arial", sans-serif;
+    font-weight: bold;
+    font-size: 49px;
+    line-height: 49px;
+    letter-spacing: 0.03em;
+    color: $blue--darken;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding: 46px 45px 120px;
+
+    h2 {
+      margin: 0 0 45px;
+      font-size: 42px;
+      line-height: 42px;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 30px 47px 60px;
+
+    h2 {
+      font-size: 32px;
+      line-height: 32px;
+    }
+  }
+}
+
+.reviews__container {
+  width: 560px;
+  position: relative;
+  margin: 0 auto;
+
+  button {
+    top: calc(50% - 13px);
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 566px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+
+    button {
+      top: calc(50% - 6px);
+    }
+  }
+}
+
+.reviews__list {
+  display: flex;
+
+  @include clear-ul;
+}
+
+.reviews__avatar {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+
+  figcaption {
+    h3 {
+      display: none;
+    }
+  }
+
+  img {
+    margin-top: 8px;
+    margin-right: 28px;
+  }
+
+  @media (max-width: $mobile-width) {
+    flex-direction: row;
+    justify-content: center;
+    padding: 0 8px;
+
+    img {
+      margin-top: -13px;
+      margin-right: 9px;
+      transform: scale(0.85);
+    }
+
+    figcaption {
+      h3 {
+        display: block;
+      }
+    }
+  }
+}
+
+.reviews__review {
+  width: 100%;
+  display: flex;
+  padding: 53px 61px 41px;
+
+  color: $white;
+  background-color: $blue;
+
+  h3 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  p {
+    margin-top: 13px;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding: 53px 65px 41px;
+  }
+
+  @media (max-width: $mobile-width) {
+    display: block;
+    padding: 48px 27px 20px;
+
+    h3 {
+      width: 45%;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 26px;
+      display: none;
+    }
+
+    p {
+      text-align: center;
+      margin-top: 9px;
+      clear: both;
+    }
+  }
+}

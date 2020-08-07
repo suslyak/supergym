@@ -5,7 +5,7 @@
   align-items: stretch;
   justify-content: flex-start;
   color: $blue;
-  padding: 115px 103px 120px;
+  padding: 115px 103px 60px;
 
   h2 {
     width: 100%;
@@ -36,7 +36,7 @@
   }
 
   @media (max-width: $tablet-width) {
-    padding: 95px 45px 100px;
+    padding: 95px 45px 50px;
 
     h2 {
       margin: 0 0 45px;
@@ -46,7 +46,7 @@
   }
 
   @media (max-width: $mobile-width) {
-    padding: 67px 15px 72px;
+    padding: 67px 15px 36px;
 
     h2 {
       font-size: 32px;

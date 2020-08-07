@@ -1186,6 +1186,46 @@ main {
       .event__picture img {
         width: 100%; } }
 
+.arrow-control {
+  content: "";
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  display: inline-block;
+  top: calc(50% - 33px);
+  border-top: none;
+  border-right: 1px solid #afafaf;
+  border-bottom: 1px solid #afafaf;
+  border-left: none;
+  background: none;
+  cursor: pointer;
+  outline: none; }
+  .arrow-control:focus, .arrow-control:active {
+    border-width: 2px;
+    border-color: #102654; }
+  .arrow-control--forward {
+    right: -52px;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg); }
+    @media (max-width: 767px) {
+      .arrow-control--forward {
+        right: -28px; } }
+  .arrow-control--backward {
+    left: -52px;
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg); }
+    @media (max-width: 767px) {
+      .arrow-control--backward {
+        left: -28px; } }
+  @media (max-width: 1023px) {
+    .arrow-control {
+      top: calc(50% - 26px); } }
+  @media (max-width: 767px) {
+    .arrow-control {
+      width: 14px;
+      height: 14px;
+      top: calc(50% - 21px); } }
+
 .treners {
   max-width: 1500px;
   display: -webkit-box;
@@ -1260,46 +1300,6 @@ main {
   list-style: none;
   padding: 0;
   margin: 0; }
-
-.treners__arrow-control {
-  content: "";
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  display: inline-block;
-  top: calc(50% - 33px);
-  border-top: none;
-  border-right: 1px solid #afafaf;
-  border-bottom: 1px solid #afafaf;
-  border-left: none;
-  background: none;
-  cursor: pointer;
-  outline: none; }
-  .treners__arrow-control:focus, .treners__arrow-control:active {
-    border-width: 2px;
-    border-color: #102654; }
-  .treners__arrow-control--forward {
-    right: -52px;
-    -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg); }
-    @media (max-width: 767px) {
-      .treners__arrow-control--forward {
-        right: -28px; } }
-  .treners__arrow-control--backward {
-    left: -52px;
-    -webkit-transform: rotate(135deg);
-            transform: rotate(135deg); }
-    @media (max-width: 767px) {
-      .treners__arrow-control--backward {
-        left: -28px; } }
-  @media (max-width: 1023px) {
-    .treners__arrow-control {
-      top: calc(50% - 26px); } }
-  @media (max-width: 767px) {
-    .treners__arrow-control {
-      width: 14px;
-      height: 14px;
-      top: calc(50% - 21px); } }
 
 .treners__trener {
   width: calc((100% - 120px) / 4);
@@ -1797,7 +1797,7 @@ main {
       -ms-flex-pack: start;
           justify-content: flex-start;
   color: #1c3374;
-  padding: 115px 103px 120px; }
+  padding: 115px 103px 60px; }
   .promotions h2 {
     width: 100%;
     margin: 0 0 56px;
@@ -1822,14 +1822,14 @@ main {
       color: #1c3374; }
   @media (max-width: 1023px) {
     .promotions {
-      padding: 95px 45px 100px; }
+      padding: 95px 45px 50px; }
       .promotions h2 {
         margin: 0 0 45px;
         font-size: 42px;
         line-height: 42px; } }
   @media (max-width: 767px) {
     .promotions {
-      padding: 67px 15px 72px; }
+      padding: 67px 15px 36px; }
       .promotions h2 {
         font-size: 32px;
         line-height: 32px; } }
@@ -2003,3 +2003,133 @@ main {
       .promotions__promotion a {
         -ms-flex-item-align: center;
             align-self: center; } }
+
+.reviews {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 55px 103px 120px; }
+  .reviews h2 {
+    width: 100%;
+    margin: 0 0 56px;
+    text-align: center;
+    font-family: "Bebas Neue", "Arial", sans-serif;
+    font-weight: bold;
+    font-size: 49px;
+    line-height: 49px;
+    letter-spacing: 0.03em;
+    color: #102654; }
+  @media (max-width: 1023px) {
+    .reviews {
+      padding: 46px 45px 120px; }
+      .reviews h2 {
+        margin: 0 0 45px;
+        font-size: 42px;
+        line-height: 42px; } }
+  @media (max-width: 767px) {
+    .reviews {
+      padding: 30px 47px 60px; }
+      .reviews h2 {
+        font-size: 32px;
+        line-height: 32px; } }
+
+.reviews__container {
+  width: 560px;
+  position: relative;
+  margin: 0 auto; }
+  .reviews__container button {
+    top: calc(50% - 13px); }
+  @media (max-width: 1023px) {
+    .reviews__container {
+      width: 566px; } }
+  @media (max-width: 767px) {
+    .reviews__container {
+      width: 100%; }
+      .reviews__container button {
+        top: calc(50% - 6px); } }
+
+.reviews__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+
+.reviews__avatar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .reviews__avatar figcaption h3 {
+    display: none; }
+  .reviews__avatar img {
+    margin-top: 8px;
+    margin-right: 28px; }
+  @media (max-width: 767px) {
+    .reviews__avatar {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      padding: 0 8px; }
+      .reviews__avatar img {
+        margin-top: -13px;
+        margin-right: 9px;
+        -webkit-transform: scale(0.85);
+                transform: scale(0.85); }
+      .reviews__avatar figcaption h3 {
+        display: block; } }
+
+.reviews__review {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 53px 61px 41px;
+  color: #ffffff;
+  background-color: #1c3374; }
+  .reviews__review h3 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 30px; }
+  .reviews__review p {
+    margin-top: 13px;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px; }
+  @media (max-width: 1023px) {
+    .reviews__review {
+      padding: 53px 65px 41px; } }
+  @media (max-width: 767px) {
+    .reviews__review {
+      display: block;
+      padding: 48px 27px 20px; }
+      .reviews__review h3 {
+        width: 45%;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 26px;
+        display: none; }
+      .reviews__review p {
+        text-align: center;
+        margin-top: 9px;
+        clear: both; } }

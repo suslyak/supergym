@@ -67,56 +67,6 @@
   @include clear-ul;
 }
 
-.treners__arrow-control {
-  content: "";
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  display: inline-block;
-  top: calc(50% - 33px);
-  border-top: none;
-  border-right: 1px solid $gray-dog;
-  border-bottom: 1px solid $gray-dog;
-  border-left: none;
-  background: none;
-  cursor: pointer;
-  outline: none;
-
-  &:focus,
-  &:active {
-    border-width: 2px;
-    border-color: $blue--darken;
-  }
-
-  &--forward {
-    right: -52px;
-    transform: rotate(-45deg);
-
-    @media (max-width: $mobile-width) {
-      right: -28px;
-    }
-  }
-
-  &--backward {
-    left: -52px;
-    transform: rotate(135deg);
-
-    @media (max-width: $mobile-width) {
-      left: -28px;
-    }
-  }
-
-  @media (max-width: $tablet-width) {
-    top: calc(50% - 26px);
-  }
-
-  @media (max-width: $mobile-width) {
-    width: 14px;
-    height: 14px;
-    top: calc(50% - 21px);
-  }
-}
-
 .treners__trener {
   width: calc((100% - 120px) / 4);
   position: relative;
