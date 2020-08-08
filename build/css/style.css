@@ -1225,6 +1225,7 @@ main {
   position: absolute;
   display: inline-block;
   top: calc(50% - 33px);
+  padding: 3px;
   border-top: none;
   border-right: 1px solid #afafaf;
   border-bottom: 1px solid #afafaf;

@@ -9,7 +9,9 @@
       SLIDER_MOBILE_GUTTER: 0,
       SLIDER_TABLET_GUTTER: 30,
       SLIDER_DESKTOP_GUTTER: 40
-    }
+    },
+    INVALID_FIELD_BACKGROUND_COLOR: 'rgba(209, 10, 66, 0.5)',
+    VALID_FIELD_BACKGROUND_COLOR: 'transparent'
   };
 
   var AbonementTapsFormElement = document.querySelector('.abonements__taps');
@@ -24,6 +26,10 @@
   var ReviewsListElement = ReviewsContainerElement.querySelector('.reviews__list');
   var ReviewsControlForward = ReviewsContainerElement.querySelector('.arrow-control--forward');
   var ReviewsControlBackward = ReviewsContainerElement.querySelector('.arrow-control--backward');
+  var formElement = document.querySelector('.requisition-form');
+  var phoneInputElement = formElement.querySelector('input[type="tel"]');
+  var formSubmitButton = formElement.querySelector('button[type="submit"]');
+  var customSubmitValidations = [];
 
   if (typeof window !== 'undefined' && window.NodeList && !NodeList.prototype.forEach) {
     NodeList.prototype.forEach = function (callback, thisArg) {
@@ -122,6 +128,57 @@
     }
   };
 
+  var indicateInvalidField = function (element, indicator) {
+    element.style.backgroundColor = (indicator) ? settings.INVALID_FIELD_BACKGROUND_COLOR : settings.VALID_FIELD_BACKGROUND_COLOR;
+  };
+
+  var initRequired = function (form) {
+    var inputs = form.querySelectorAll('input');
+    inputs.forEach(function (input) {
+      if (input.hasAttribute('custom-required')) {
+        input.removeAttribute('required');
+      }
+    });
+  };
+
+  var customRequired = function (element) {
+    var validityMessage = '';
+
+    if (element.hasAttribute('custom-required')) {
+      if (!element.value) {
+        validityMessage += 'Это обязательное поле';
+      }
+    }
+
+    element.setCustomValidity(validityMessage);
+
+    indicateInvalidField(element, validityMessage);
+  };
+
+  var validateForm = function (form, validations) {
+    var validity = 1;
+    var inputs = form.querySelectorAll('input');
+
+    inputs.forEach(function (input) {
+      for (var i = 0; i < validations.length; i++) {
+        validations[i](input);
+      }
+
+      validity *= input.checkValidity();
+
+      input.reportValidity();
+    });
+
+    return validity;
+  };
+
+  var customSubmitForm = function (form) {
+    if (validateForm(form, customSubmitValidations)) {
+      form.submit();
+    }
+  };
+  customSubmitValidations.push(customRequired);
+
   initAbonements(1);
 
   AbonementTapsRadioElements.forEach(function (element) {
@@ -144,6 +201,29 @@
 
   ReviewsControlBackward.addEventListener('click', function () {
     slideBackward(ReviewsListElement, ReviewsContainerElement);
+  });
+
+  phoneInputElement.addEventListener('input', function () {
+    var validityMessage = '';
+    if (phoneInputElement.value) {
+      phoneInputElement.value = phoneInputElement.value.replace(/[^0-9-()]/, '');
+    }
+
+    phoneInputElement.setCustomValidity(validityMessage);
+
+    indicateInvalidField(phoneInputElement, validityMessage);
+  });
+
+  initRequired(formElement);
+
+  formSubmitButton.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    customSubmitForm(formElement);
+  });
+
+  formElement.addEventListener('submit', function (evt) {
+    evt.preventDefault();
+    customSubmitForm(formElement);
   });
 
 })();
