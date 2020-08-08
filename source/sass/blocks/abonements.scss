@@ -163,6 +163,14 @@
     h3 {
       display: block;
     }
+
+    li {
+      margin-top: 40px;
+
+      &:nth-child(-n+3) {
+        margin-top: 0;
+      }
+    }
   }
 
   @media (max-width: $tablet-width) {
@@ -183,7 +191,6 @@
 
 .abonements__card {
   width: calc((100% - 80px) / 3);
-  margin-top: 40px;
   margin-right: 40px;
   padding: 61px 10px;
   display: flex;
@@ -194,10 +201,6 @@
 
   &:nth-child(3n+3) {
     margin-right: 0;
-  }
-
-  &:nth-child(-n+3) {
-    margin-top: 0;
   }
 
   p {
@@ -217,6 +220,10 @@
       border-color: $white;
       background: linear-gradient(111.72deg, $red--brighten 17.6%, $blue-gradient-button 95.31%);
     }
+  }
+
+  &--hide {
+    display: none;
   }
 
   &--no-js {
