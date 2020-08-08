@@ -37,6 +37,10 @@
     }
   }
 
+  &--no-js {
+    display: none;
+  }
+
   @media (max-width: $tablet-width) {
     top: calc(50% - 26px);
   }

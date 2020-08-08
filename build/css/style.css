@@ -1249,6 +1249,8 @@ main {
     @media (max-width: 767px) {
       .arrow-control--backward {
         left: -28px; } }
+  .arrow-control--no-js {
+    display: none; }
   @media (max-width: 1023px) {
     .arrow-control {
       top: calc(50% - 26px); } }
@@ -1318,20 +1320,40 @@ main {
       margin: 25px auto 25px;
       width: 100%; } }
 
+.treners__viewport {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  overflow: hidden; }
+
 .treners__treners-list {
   width: 100%;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
   list-style: none;
   padding: 0;
   margin: 0; }
+  .treners__treners-list--no-js {
+    width: 100%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    .treners__treners-list--no-js li:nth-child(4n+4) {
+      margin-right: 0; }
+    @media (max-width: 1023px) {
+      .treners__treners-list--no-js li:nth-child(2n+2) {
+        margin-right: 0; } }
+    @media (max-width: 767px) {
+      .treners__treners-list--no-js li:nth-child(n) {
+        margin-right: 0; } }
 
 .treners__trener {
   width: calc((100% - 120px) / 4);
@@ -1346,13 +1368,13 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   margin-right: 40px;
   margin-bottom: 40px;
   color: #ffffff;
   background-color: rgba(16, 38, 84, 0.5);
   overflow: hidden; }
-  .treners__trener:nth-child(4n+4) {
-    margin-right: 0; }
   .treners__trener:hover div:first-child {
     z-index: 3;
     display: -webkit-box;
@@ -1383,16 +1405,12 @@ main {
       width: calc((100% - 30px) / 2);
       margin-right: 30px;
       margin-bottom: 30px; }
-      .treners__trener:nth-child(2n+2) {
-        margin-right: 0; }
       .treners__trener h3 {
         line-height: 21px; } }
   @media (max-width: 767px) {
     .treners__trener {
       width: 100%;
-      margin-right: 0; }
-      .treners__trener:nth-child(n) {
-        margin-right: 0; } }
+      margin-right: 0; } }
 
 .treners__info {
   width: 100%;
@@ -2102,13 +2120,35 @@ main {
       .reviews__container button {
         top: calc(50% - 6px); } }
 
-.reviews__list {
+.reviews__viewport {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
+  overflow: hidden; }
+
+.reviews__list {
+  width: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   list-style: none;
   padding: 0;
   margin: 0; }
+  .reviews__list--no-js {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    .reviews__list--no-js li {
+      margin-bottom: 30px; }
+      .reviews__list--no-js li:last-child {
+        margin-bottom: 0; }
 
 .reviews__avatar {
   display: -webkit-box;
@@ -2148,6 +2188,8 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   padding: 53px 61px 41px;
   color: #ffffff;
   background-color: #1c3374; }
