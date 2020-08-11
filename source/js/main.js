@@ -135,8 +135,9 @@
   var initRequired = function (form) {
     var inputs = form.querySelectorAll('input');
     inputs.forEach(function (input) {
-      if (input.hasAttribute('custom-required')) {
-        input.removeAttribute('required');
+      if (input.hasAttribute('required')) {
+        input.setAttribute('custom-required', true);
+         input.removeAttribute('required');
       }
     });
   };
