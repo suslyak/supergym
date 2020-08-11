@@ -388,7 +388,7 @@ main {
     -o-border-image: linear-gradient(140deg, #ed0233 0%, #00359f 100%);
        border-image: linear-gradient(140deg, #ed0233 0%, #00359f 100%);
     border-image-slice: 1;
-    opacity: 0.6; }
+    opacity: 0.3; }
   .button--blue {
     color: #102654;
     border-width: 2px;
@@ -462,18 +462,11 @@ main {
     .page-header a:visited {
       color: #ffffff; }
     .page-header a:hover {
-      -o-border-image: linear-gradient(140deg, #ed0233 0%, #00359f 100%);
-         border-image: linear-gradient(140deg, #ed0233 0%, #00359f 100%);
-      border-image-slice: 1; }
-    .page-header a:focus {
-      -o-border-image: linear-gradient(140deg, #ed0233 0%, #00359f 100%);
-         border-image: linear-gradient(140deg, #ed0233 0%, #00359f 100%);
-      border-image-slice: 1; }
-    .page-header a:active {
-      -o-border-image: linear-gradient(140deg, #ed0233 0%, #00359f 100%);
-         border-image: linear-gradient(140deg, #ed0233 0%, #00359f 100%);
-      border-image-slice: 1;
       opacity: 0.6; }
+    .page-header a:focus {
+      opacity: 0.6; }
+    .page-header a:active {
+      opacity: 0.3; }
 
 .page-header__top-info {
   width: 100%;
@@ -502,6 +495,22 @@ main {
           align-items: flex-end;
   margin-top: 104px;
   margin-right: 66px; }
+  .page-header__info a {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    position: relative;
+    left: 2px;
+    margin-top: 64px; }
+    @media (max-width: 1023px) {
+      .page-header__info a {
+        margin-top: 42px;
+        padding: 20px 31px; } }
+    @media (max-width: 767px) {
+      .page-header__info a {
+        width: 100%;
+        left: 0;
+        text-align: center; } }
   .page-header__info span {
     display: block;
     margin-bottom: 4px;
@@ -524,21 +533,6 @@ main {
         font-size: 28px;
         line-height: 28px;
         margin-bottom: 7px; } }
-  .page-header__info button {
-    -webkit-box-ordinal-group: 4;
-        -ms-flex-order: 3;
-            order: 3;
-    position: relative;
-    left: 2px;
-    margin-top: 64px; }
-    @media (max-width: 1023px) {
-      .page-header__info button {
-        margin-top: 42px;
-        padding: 20px 31px; } }
-    @media (max-width: 767px) {
-      .page-header__info button {
-        width: 100%;
-        left: 0; } }
   @media (max-width: 1320px) {
     .page-header__info {
       width: 43%;
@@ -612,6 +606,12 @@ main {
   line-height: 26px;
   letter-spacing: 0.03em;
   font-family: "Bebas Neue", "Arial", sans-serif; }
+  .page-header__phone:hover {
+    opacity: 0.6; }
+  .page-header__phone:focus {
+    opacity: 0.6; }
+  .page-header__phone:active {
+    opacity: 0.3; }
   @media (max-width: 1023px) {
     .page-header__phone {
       font-size: 24px;
@@ -733,18 +733,29 @@ main {
   top: -18%; }
   .gym__video img {
     width: 100%; }
-  .gym__video svg {
+  .gym__video button {
     width: 100px;
     height: 100px;
     position: absolute;
     left: calc(50% - 50px);
-    top: calc(50% - 50px); }
+    top: calc(50% - 50px);
+    border: none;
+    background: url("../img/icon-play.svg") no-repeat;
+    cursor: pointer;
+    outline: none; }
+    .gym__video button:hover {
+      opacity: 0.6; }
+    .gym__video button:focus {
+      opacity: 0.6; }
+    .gym__video button:active {
+      opacity: 0.3; }
     @media (max-width: 1023px) {
-      .gym__video svg {
+      .gym__video button {
         width: 73px;
         height: 73px;
         left: calc(50% - 36px);
-        top: calc(50% - 36px); } }
+        top: calc(50% - 36px);
+        background-size: 73px 73px; } }
   @media (max-width: 1023px) {
     .gym__video {
       width: 39%;
@@ -775,14 +786,14 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 112px 103px 120px;
+  padding: 112px 103px 80px;
   background-color: #f8f9fc; }
   @media (max-width: 1023px) {
     .abonements {
-      padding: 98px 163px 100px; } }
+      padding: 98px 163px 59px; } }
   @media (max-width: 767px) {
     .abonements {
-      padding: 67px 15px 72px; } }
+      padding: 67px 15px 31px; } }
   .abonements h2 {
     font-family: "Bebas Neue", "Arial", sans-serif;
     font-style: normal;
@@ -872,7 +883,7 @@ main {
       -o-border-image: linear-gradient(140deg, #ed0233 0%, #00359f 100%);
          border-image: linear-gradient(140deg, #ed0233 0%, #00359f 100%);
       border-image-slice: 1;
-      opacity: 0.6; }
+      opacity: 0.3; }
     @media (max-width: 1023px) {
       .abonements__taps label {
         font-size: 18px;
@@ -946,6 +957,7 @@ main {
 .abonements__card {
   width: calc((100% - 80px) / 3);
   margin-right: 40px;
+  margin-bottom: 40px;
   padding: 61px 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -986,9 +998,7 @@ main {
       width: 100%;
       padding-top: 58px;
       margin-right: 0;
-      margin-bottom: 41px; }
-      .abonements__card:last-child {
-        margin-bottom: 0; } }
+      margin-bottom: 41px; } }
   @media (max-width: 767px) {
     .abonements__card {
       padding: 43px 20px;
@@ -1883,7 +1893,7 @@ main {
       -o-border-image: linear-gradient(140deg, #ed0233 0%, #00359f 100%);
          border-image: linear-gradient(140deg, #ed0233 0%, #00359f 100%);
       border-image-slice: 1;
-      opacity: 0.6; }
+      opacity: 0.3; }
   @media (max-width: 1023px) {
     .promotions {
       padding: 95px 45px 50px; }
@@ -2242,6 +2252,7 @@ main {
     border-right: none;
     border-bottom: 1px solid #1c3374;
     border-left: none;
+    border-radius: 0;
     background-color: transparent;
     outline: none; }
     .requisition-form input:last-of-type {
@@ -2458,6 +2469,7 @@ main {
     text-decoration: underline; }
 
 .page-footer {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2472,7 +2484,8 @@ main {
           justify-content: center;
   padding: 49px 103px 24px;
   color: #ffffff;
-  background-color: #030a1a; }
+  background-color: #030a1a;
+  overflow: hidden; }
   @media (max-width: 1023px) {
     .page-footer {
       padding: 50px 45px; } }
@@ -2550,7 +2563,7 @@ main {
       -o-border-image: linear-gradient(140deg, #ed0233 0%, #00359f 100%);
          border-image: linear-gradient(140deg, #ed0233 0%, #00359f 100%);
       border-image-slice: 1;
-      opacity: 0.6; }
+      opacity: 0.3; }
     .page-footer__menulink a:visited {
       color: #ffffff; }
     .page-footer__menulink a:hover {
@@ -2584,18 +2597,11 @@ main {
   top: 46px;
   left: 103px; }
   .page-footer__logo-link:hover {
-    -o-border-image: linear-gradient(140deg, #ed0233 0%, #00359f 100%);
-       border-image: linear-gradient(140deg, #ed0233 0%, #00359f 100%);
-    border-image-slice: 1; }
-  .page-footer__logo-link:focus {
-    -o-border-image: linear-gradient(140deg, #ed0233 0%, #00359f 100%);
-       border-image: linear-gradient(140deg, #ed0233 0%, #00359f 100%);
-    border-image-slice: 1; }
-  .page-footer__logo-link:active {
-    -o-border-image: linear-gradient(140deg, #ed0233 0%, #00359f 100%);
-       border-image: linear-gradient(140deg, #ed0233 0%, #00359f 100%);
-    border-image-slice: 1;
     opacity: 0.6; }
+  .page-footer__logo-link:focus {
+    opacity: 0.6; }
+  .page-footer__logo-link:active {
+    opacity: 0.3; }
   @media (max-width: 1023px) {
     .page-footer__logo-link {
       top: 48px;
@@ -2627,18 +2633,11 @@ main {
     .page-footer__social-links li:last-child {
       margin-right: 0; }
   .page-footer__social-links a:hover {
-    -o-border-image: linear-gradient(140deg, #ed0233 0%, #00359f 100%);
-       border-image: linear-gradient(140deg, #ed0233 0%, #00359f 100%);
-    border-image-slice: 1; }
-  .page-footer__social-links a:focus {
-    -o-border-image: linear-gradient(140deg, #ed0233 0%, #00359f 100%);
-       border-image: linear-gradient(140deg, #ed0233 0%, #00359f 100%);
-    border-image-slice: 1; }
-  .page-footer__social-links a:active {
-    -o-border-image: linear-gradient(140deg, #ed0233 0%, #00359f 100%);
-       border-image: linear-gradient(140deg, #ed0233 0%, #00359f 100%);
-    border-image-slice: 1;
     opacity: 0.6; }
+  .page-footer__social-links a:focus {
+    opacity: 0.6; }
+  .page-footer__social-links a:active {
+    opacity: 0.3; }
   @media (max-width: 1023px) {
     .page-footer__social-links li {
       margin-right: 20px;

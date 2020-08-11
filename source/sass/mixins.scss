@@ -23,6 +23,20 @@
   &:active {
     border-image: linear-gradient(140deg, $red--brighten 0%, $blue-gradient 100%);
     border-image-slice: 1;
+    opacity: 0.3;
+  }
+}
+
+@mixin actions-op() {
+  &:hover {
     opacity: 0.6;
+  }
+
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }

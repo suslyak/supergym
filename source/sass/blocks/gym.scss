@@ -113,18 +113,25 @@
     width: 100%;
   }
 
-  svg {
+  button {
     width: 100px;
     height: 100px;
     position: absolute;
     left: calc(50% - 50px);
     top: calc(50% - 50px);
+    border: none;
+    background: url("../img/icon-play.svg") no-repeat;
+    cursor: pointer;
+    outline: none;
+
+    @include actions-op;
 
     @media (max-width: $tablet-width) {
       width: 73px;
       height: 73px;
       left: calc(50% - 36px);
       top: calc(50% - 36px);
+      background-size: 73px 73px;
     }
   }
 
