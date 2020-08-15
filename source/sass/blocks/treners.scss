@@ -1,5 +1,5 @@
 .treners {
-  max-width: 1500px;
+  max-width: 1400px;
   display: flex;
   position: relative;
   flex-direction: column;
@@ -47,13 +47,14 @@
   margin-top: 36px;
 
   @media (max-width: $tablet-width) {
+    width: 568px;
     margin-top: 25px;
   }
 
   @media (max-width: $mobile-width) {
+    width: 227px;
     padding: 0;
     margin: 25px auto 25px;
-    width: 100%;
   }
 }
 
@@ -145,7 +146,7 @@
 
   span {
     position: absolute;
-    bottom: 22px;
+    bottom: 24px;
     z-index: 2;
   }
 
@@ -167,7 +168,7 @@
 
 .treners__info {
   width: 100%;
-  min-height: 100%;
+  min-height: 294px;
   position: relative;
   left: 0;
   top: 0;
@@ -176,17 +177,18 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 52px 20px;
+  padding: 21% 20px 19%;
   color: $white;
   background-color: $blueOp09--darken;
 
 
   @media (max-width: $tablet-width) {
-    padding: 55px 20px 50px;
+    min-height: unset;
+    padding: 55px 20px 52px;
   }
 
   @media (max-width: $mobile-width) {
-    padding: 19% 15px;
+    padding: 20% 15px;
   }
 }
 
@@ -196,7 +198,7 @@
   line-height: 21px;
 
   @include clear-ul;
-  margin: 33px 0 0;
+  margin: 31px 0 0;
 
   li {
     display: flex;

@@ -3,8 +3,8 @@
 
   var settings = {
     MOBILE_BREAKPOINT: 767,
-    TABLET_BREAKPOINT: 1023,
-    DESKTOP_MIN_BREAKPOINT: 1024,
+    TABLET_BREAKPOINT: 1199,
+    DESKTOP_MIN_BREAKPOINT: 1200,
     TRENERS_GUTTERS: {
       SLIDER_MOBILE_GUTTER: 0,
       SLIDER_TABLET_GUTTER: 30,
@@ -137,7 +137,7 @@
     inputs.forEach(function (input) {
       if (input.hasAttribute('required')) {
         input.setAttribute('custom-required', true);
-         input.removeAttribute('required');
+        input.removeAttribute('required');
       }
     });
   };
