@@ -1427,7 +1427,6 @@ main {
 
 .treners__info {
   width: 100%;
-  min-height: 294px;
   position: relative;
   left: 0;
   top: 0;
@@ -1450,7 +1449,6 @@ main {
   background-color: rgba(16, 38, 84, 0.89); }
   @media (max-width: 1199px) {
     .treners__info {
-      min-height: unset;
       padding: 55px 20px 52px; } }
   @media (max-width: 767px) {
     .treners__info {
@@ -1479,6 +1477,13 @@ main {
       font-weight: bold;
       display: inline-block;
       margin-right: 10px; }
+  @media (max-width: 1320px) {
+    .treners__credentials {
+      font-size: 12px; }
+      .treners__credentials li {
+        margin: 0 0 10px 15%; }
+        .treners__credentials li::before {
+          font-size: 20px; } }
   @media (max-width: 767px) {
     .treners__credentials li {
       margin: 0 0 13px 9%; } }

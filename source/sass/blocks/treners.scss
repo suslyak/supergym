@@ -168,7 +168,6 @@
 
 .treners__info {
   width: 100%;
-  min-height: 294px;
   position: relative;
   left: 0;
   top: 0;
@@ -183,7 +182,6 @@
 
 
   @media (max-width: $tablet-width) {
-    min-height: unset;
     padding: 55px 20px 52px;
   }
 
@@ -215,6 +213,18 @@
       font-weight: bold;
       display: inline-block;
       margin-right: 10px;
+    }
+  }
+
+  @media (max-width: $desktop-middle-width) {
+    font-size: 12px;
+
+    li {
+      margin: 0 0 10px 15%;
+
+      &::before {
+        font-size: 20px;
+      }
     }
   }
 
